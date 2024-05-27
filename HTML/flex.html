@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 70vh;
+            background-color: aqua;
+            padding: 5px;
+            display: flex;
+            flex-direction:row;
+            justify-content: center;  /* How the content is justified and it works with respect to main-axis*/
+            align-items: center; /*  works with respect to cross axis */
+            gap: 20px; 
+            /* Whenever there is overflow of elements, we can use flex-wrap. Basically it makes a 2D layout */
+        }
+        .item{
+            background-color: brown;
+            margin: 5px;
+            padding: 8px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">content1</div>
+        <div class="item">content2</div>
+        <div class="item">content3</div>
+        <div class="item">content4</div>
+    </div>
+</body>
+</html>
+<!-- ctrl+shift+alt+arrow to write same 
+display: flex basically moves all the child in 1D row
+direction of the container is main-axis and the other is cross-axis
+flex-direction is used to alter the main-axis and cross-axis -->
+
+<!-- 
+    align-content when used with flex-wrap:wrap. It aligns the content
+    with respect to container.
+
+    ***align-content is always given preference on top of align-items when
+    flex-wrap is used.
+
+    ***Always use align-content only when flex-wrap is used.
+
+    **flex-grow  -> How much will an element grow wrt viewport
+    **flex-basis -> Size preset
+    **align-self -> Used to align self
+ -->
